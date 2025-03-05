@@ -1,0 +1,11 @@
+framework module DynamicLinkFramework {
+  umbrella header "DynamicLinkFramework.h"
+  export *
+
+  module * { export * }
+}
+
+module DynamicLinkFramework.Swift {
+  header "DynamicLinkFramework-Swift.h"
+  requires objc
+}
