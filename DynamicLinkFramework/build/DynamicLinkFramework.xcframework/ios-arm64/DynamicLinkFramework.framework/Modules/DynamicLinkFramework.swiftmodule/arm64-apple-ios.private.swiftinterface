@@ -33,7 +33,7 @@ public let kDLParameterContent: Swift.String
 public let kDLParameterMedium: Swift.String
 public let kDLParameterSource: Swift.String
 public let kDLParameterTerm: Swift.String
-@_inheritsConvenienceInitializers @objc public class DLUtilities : ObjectiveC.NSObject {
+@objc @_inheritsConvenienceInitializers @objcMembers public class DLUtilities : ObjectiveC.NSObject {
   @objc public static let shared: DynamicLinkFramework.DLUtilities
   @objc public static var DLCustomDomains: Swift.Set<Foundation.URL>
   @objc public func urlQueryStringFromDictionary(_ dictionary: [Swift.String : Swift.String]) -> Swift.String
@@ -51,7 +51,7 @@ extension Swift.Optional where Wrapped == Any {
   public func dateFromWireFormat() -> Foundation.Date?
   public func stringFromWireFormat() -> Swift.String?
 }
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class DLDynamicLinks : ObjectiveC.NSObject {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class DLDynamicLinks : ObjectiveC.NSObject {
   @objc public static let shared: DynamicLinkFramework.DLDynamicLinks
   @objc public func configureDynamicLinks()
   @objc public func createShortURL(from parameters: [Swift.String : Any], completion: @escaping (Foundation.Data?, (any Swift.Error)?) -> Swift.Void)
@@ -71,7 +71,7 @@ public let kDLParameterWeakMatchEndpoint: Swift.String
 public let kDLParameterMinimumAppVersion: Swift.String
 public let kDLParameterMatchType: Swift.String
 public let kDLParameterMatchMessage: Swift.String
-@objc public class DLDynamicLink : ObjectiveC.NSObject {
+@objc @objcMembers public class DLDynamicLink : ObjectiveC.NSObject {
   @objc final public let originalURL: Foundation.URL
   @objc final public let host: Swift.String?
   @objc final public let path: Swift.String
@@ -109,7 +109,7 @@ extension Swift.Array where Element == Any {
     get
   }
 }
-@_inheritsConvenienceInitializers @objc public class DLLoggerConfig : ObjectiveC.NSObject {
+@objc @_inheritsConvenienceInitializers @objcMembers public class DLLoggerConfig : ObjectiveC.NSObject {
   @objc public static var isLoggingEnabled: Swift.Bool
   @objc public static var shouldLogToFile: Swift.Bool
   @objc public static var shouldUseOSLog: Swift.Bool
@@ -117,8 +117,8 @@ extension Swift.Array where Element == Any {
   @objc override dynamic public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class DLLogger : ObjectiveC.NSObject {
-  @objc public static func log(_ message: Swift.String, level: DynamicLinkFramework.LogLevel = .info, function: Swift.String = #function, file: Swift.String = #file, line: Swift.Int = #line)
+@objc @_inheritsConvenienceInitializers @objcMembers public class DLLogger : ObjectiveC.NSObject {
+  @objc public static func log(_ message: Swift.String, level: DynamicLinkFramework.LogLevel = .info)
   @objc public static func clearLogFile()
   @objc override dynamic public init()
   @objc deinit
@@ -126,9 +126,9 @@ extension Swift.Array where Element == Any {
 extension Swift.Encodable {
   public func toJsonString() -> Swift.String
 }
-@_inheritsConvenienceInitializers @objc public class DLConfig : ObjectiveC.NSObject {
-  public static var allowedHosts: [Swift.String]
-  public static var appSchemes: [Swift.String]
+@objc @_inheritsConvenienceInitializers @objcMembers public class DLConfig : ObjectiveC.NSObject {
+  @objc public static var allowedHosts: [Swift.String]
+  @objc public static var appSchemes: [Swift.String]
   @objc override dynamic public init()
   @objc deinit
 }
@@ -145,7 +145,7 @@ extension Foundation.Date {
 extension Swift.Optional where Wrapped == Foundation.URL {
   public func queryItems() -> [DynamicLinkFramework.DLKeyValue]
 }
-@_inheritsConvenienceInitializers @objc public class DLKeyValue : ObjectiveC.NSObject {
+@objc @_inheritsConvenienceInitializers @objcMembers public class DLKeyValue : ObjectiveC.NSObject {
   @objc public var key: Swift.String?
   @objc public var value: Swift.String?
   @objc public static func key(_ key: Swift.String, value: Swift.String) -> DynamicLinkFramework.DLKeyValue
@@ -156,7 +156,7 @@ extension Swift.Optional where Wrapped == Foundation.URL {
   @objc override dynamic public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class DLUserDefaultHelper : ObjectiveC.NSObject {
+@objc @_inheritsConvenienceInitializers @objcMembers public class DLUserDefaultHelper : ObjectiveC.NSObject {
   @objc public static let shared: DynamicLinkFramework.DLUserDefaultHelper
   @objc public func setString(_ value: Swift.String, forKey key: Swift.String)
   @objc public func getString(forKey key: Swift.String) -> Swift.String?
@@ -176,7 +176,7 @@ public let DL_PRE_LAST_DYNAMICLINK: Swift.String
 public let kDLReadDeepLinkAfterLaunchApp: Swift.String
 public let kDLAppWasTerminated: Swift.String
 public let kInfoPlistCustomDomainsKey: Swift.String
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class DLAPIClient : ObjectiveC.NSObject {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class DLAPIClient : ObjectiveC.NSObject {
   @objc public static let shared: DynamicLinkFramework.DLAPIClient
   @objc public func request(endpoint: Swift.String, method: Swift.String = "GET", parameters: [Swift.String : Any]? = nil, headers: [Swift.String : Swift.String]? = nil, completion: @escaping DynamicLinkFramework.DLDynamicLinkResultHandler)
   @objc public func get(endpoint: Swift.String, parameters: [Swift.String : Any]? = nil, headers: [Swift.String : Swift.String]? = nil, completion: @escaping DynamicLinkFramework.DLDynamicLinkResultHandler)
@@ -204,8 +204,8 @@ public let kGenericErrorDomain: Swift.String
     get
   }
 }
-@_inheritsConvenienceInitializers @objc public class DLDynamicLinkNetworking : ObjectiveC.NSObject {
-  public static let shared: DynamicLinkFramework.DLDynamicLinkNetworking
+@objc @_inheritsConvenienceInitializers @objcMembers public class DLDynamicLinkNetworking : ObjectiveC.NSObject {
+  @objc public static let shared: DynamicLinkFramework.DLDynamicLinkNetworking
   @objc public func extractErrorForShortLink(url: Foundation.URL, data: Foundation.Data?, response: Foundation.URLResponse?, error: (any Swift.Error)?) -> (any Swift.Error)?
   @objc public func resolveShortLink(url: Foundation.URL?, completion: @escaping DynamicLinkFramework.DLDynamicLinkResolverHandler)
   @objc public func createShortURLFakeResponse(from parameters: [Swift.String : Any], completion: @escaping DynamicLinkFramework.DLDynamicLinkResultHandler)

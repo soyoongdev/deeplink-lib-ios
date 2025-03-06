@@ -7,7 +7,7 @@
 
 import Foundation
 
-@objc public class DLConfig: NSObject {  
+@objcMembers public class DLConfig: NSObject {  
   /// Danh sách host được phép xử lý
   public static var allowedHosts: [String] = []
   

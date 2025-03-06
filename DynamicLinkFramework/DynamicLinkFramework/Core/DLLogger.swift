@@ -25,18 +25,22 @@ import os.log
 }
 
 /// Cấu hình Logger
-@objc public class DLLoggerConfig: NSObject {
-    @objc public static var isLoggingEnabled: Bool = true  // Bật/Tắt log console
-    @objc public static var shouldLogToFile: Bool = true   // Bật/Tắt log file
-    @objc public static var shouldUseOSLog: Bool = true    // Bật/Tắt OSLog
-    @objc public static var shouldUseNSLog: Bool = true    // Ghi log vào NSLog
+@objcMembers public class DLLoggerConfig: NSObject {
+    public static var isLoggingEnabled: Bool = true  // Bật/Tắt log console
+    public static var shouldLogToFile: Bool = true   // Bật/Tắt log file
+    public static var shouldUseOSLog: Bool = true    // Bật/Tắt OSLog
+    public static var shouldUseNSLog: Bool = true    // Ghi log vào NSLog
 }
 
 /// DLLogger - Hỗ trợ log theo nhiều cấp độ, lưu log vào file nếu cần
-@objc public class DLLogger: NSObject {
+@objcMembers public class DLLogger: NSObject {
     
     /// Ghi log với đầy đủ thông tin
-    @objc public static func log(_ message: String, level: LogLevel = .info, function: String = #function, file: String = #file, line: Int = #line) {
+    public static func log(_ message: String, level: LogLevel = .info) {
+        let function: String = #function
+        let file: String = #file
+        let line: Int = #line
+        
         let fileName = (file as NSString).lastPathComponent
         let logMessage = "[\(level.description)] \(fileName) -> \(function) [Line \(line)]: \(message)"
         
@@ -101,7 +105,7 @@ import os.log
     }
     
     /// Xóa file log
-    @objc public static func clearLogFile() {
+    public static func clearLogFile() {
         let fileManager = FileManager.default
         let logFilePath = getLogFilePath()
         

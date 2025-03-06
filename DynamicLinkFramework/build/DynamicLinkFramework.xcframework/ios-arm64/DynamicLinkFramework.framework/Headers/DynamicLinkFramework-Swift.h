@@ -318,6 +318,15 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) DLAPIClient 
 
 SWIFT_CLASS("_TtC20DynamicLinkFramework8DLConfig")
 @interface DLConfig : NSObject
+/// Danh sách host được phép xử lý
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSArray<NSString *> * _Nonnull allowedHosts;)
++ (NSArray<NSString *> * _Nonnull)allowedHosts SWIFT_WARN_UNUSED_RESULT;
++ (void)setAllowedHosts:(NSArray<NSString *> * _Nonnull)value;
+/// Scheme mặc định cho ứng dụng
+/// Src: Lấy Scheme array từ CFBundleURLSchemes trong file Info.plist
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSArray<NSString *> * _Nonnull appSchemes;)
++ (NSArray<NSString *> * _Nonnull)appSchemes SWIFT_WARN_UNUSED_RESULT;
++ (void)setAppSchemes:(NSArray<NSString *> * _Nonnull)value;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -348,6 +357,8 @@ SWIFT_CLASS("_TtC20DynamicLinkFramework13DLDynamicLink")
 
 SWIFT_CLASS("_TtC20DynamicLinkFramework23DLDynamicLinkNetworking")
 @interface DLDynamicLinkNetworking : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) DLDynamicLinkNetworking * _Nonnull shared;)
++ (DLDynamicLinkNetworking * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
 - (NSError * _Nullable)extractErrorForShortLinkWithUrl:(NSURL * _Nonnull)url data:(NSData * _Nullable)data response:(NSURLResponse * _Nullable)response error:(NSError * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 /// Hàm xử lý shortlink (phân giải shortlink)
 - (void)resolveShortLinkWithUrl:(NSURL * _Nullable)url completion:(void (^ _Nonnull)(NSURL * _Nullable, NSError * _Nullable))completion;
@@ -388,7 +399,7 @@ enum LogLevel : NSInteger;
 SWIFT_CLASS("_TtC20DynamicLinkFramework8DLLogger")
 @interface DLLogger : NSObject
 /// Ghi log với đầy đủ thông tin
-+ (void)log:(NSString * _Nonnull)message level:(enum LogLevel)level function:(NSString * _Nonnull)function file:(NSString * _Nonnull)file line:(NSInteger)line;
++ (void)log:(NSString * _Nonnull)message level:(enum LogLevel)level;
 /// Xóa file log
 + (void)clearLogFile;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;

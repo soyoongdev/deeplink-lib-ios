@@ -22,11 +22,11 @@ public let kGenericErrorDomain = "deeplink.algamestudio.com"
     case oneTimeUse = 1
 };
 
-@objc public class DLDynamicLinkNetworking: NSObject {
+@objcMembers public class DLDynamicLinkNetworking: NSObject {
     
     public static let shared = DLDynamicLinkNetworking()
     
-    @objc public func extractErrorForShortLink(url: URL, data: Data?, response: URLResponse?, error: Error?) -> Error? {
+    public func extractErrorForShortLink(url: URL, data: Data?, response: URLResponse?, error: Error?) -> Error? {
         if let error = error {
             return error
         }
@@ -60,7 +60,7 @@ public let kGenericErrorDomain = "deeplink.algamestudio.com"
     // MARK: - Public Interface
     
     /// Hàm xử lý shortlink (phân giải shortlink)
-    @objc public func resolveShortLink(url: URL?, completion: @escaping DLDynamicLinkResolverHandler) {
+    public func resolveShortLink(url: URL?, completion: @escaping DLDynamicLinkResolverHandler) {
         guard let url = url else {
             DLLogger.log("❌ Không thể nhận lấy URL", level: .error)
             completion(nil, nil)
@@ -123,7 +123,7 @@ public let kGenericErrorDomain = "deeplink.algamestudio.com"
         //    self.executeOnePlatformRequest(requestBody: requestBody, forURL: requestURLString, completionHandler: resolveLinkCallback)
     }
     
-    @objc public func createShortURLFakeResponse(from parameters: [String: Any], completion: @escaping DLDynamicLinkResultHandler) {
+    public func createShortURLFakeResponse(from parameters: [String: Any], completion: @escaping DLDynamicLinkResultHandler) {
         DispatchQueue.global().asyncAfter(deadline: .now() + 0.5) {
             let fakeResponse = """
                 {
@@ -135,12 +135,12 @@ public let kGenericErrorDomain = "deeplink.algamestudio.com"
         }
     }
     
-    @objc public func createShortURL(from parameters: [String: Any], completion: @escaping DLDynamicLinkResultHandler) {
+    public func createShortURL(from parameters: [String: Any], completion: @escaping DLDynamicLinkResultHandler) {
         DLAPIClient.shared.post(endpoint: "/generation/shortlink", parameters: parameters, completion: completion)
     }
     
     /// Hàm cập nhật thống kê số lần mở link (first open or reopen deeplink statistics)
-    @objc public func updateDeepLinkAnalytics(url: URL, count: Int, firstOpen: Bool, reopen: Bool, completion: @escaping DLDynamicLinkResultHandler) {
+    public func updateDeepLinkAnalytics(url: URL, count: Int, firstOpen: Bool, reopen: Bool, completion: @escaping DLDynamicLinkResultHandler) {
         // Dữ liệu cần gửi lên server
         let requestBody: [String: Any] = [
             "deeplink": url.absoluteString,

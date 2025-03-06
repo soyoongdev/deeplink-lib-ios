@@ -9,11 +9,11 @@ import Foundation
 
 // MARK: - DLKeyValue
 
-@objc public class DLKeyValue: NSObject {
-    @objc public var key: String?
-    @objc public var value: String?
+@objcMembers public class DLKeyValue: NSObject {
+    public var key: String?
+    public var value: String?
     
-    @objc public static func key(_ key: String, value: String) -> DLKeyValue {
+    public static func key(_ key: String, value: String) -> DLKeyValue {
         let kv = DLKeyValue()
         kv.key = key
         kv.value = value

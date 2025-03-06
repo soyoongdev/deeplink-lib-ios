@@ -15,13 +15,13 @@ public let kDLParameterMedium = "utm_medium"
 public let kDLParameterSource = "utm_source"
 public let kDLParameterTerm = "utm_term"
 
-@objc public class DLUtilities: NSObject {
+@objcMembers public class DLUtilities: NSObject {
     
-    @objc public static let shared = DLUtilities()
+    public static let shared = DLUtilities()
     
-    @objc public static var DLCustomDomains: Set<URL> = []
+    public static var DLCustomDomains: Set<URL> = []
     
-    @objc public func urlQueryStringFromDictionary(_ dictionary: [String: String]) -> String {
+    public func urlQueryStringFromDictionary(_ dictionary: [String: String]) -> String {
         var parameters = ""
         let queryCharacterSet = CharacterSet.alphanumerics
         let parameterFormatString = "%@%@=%@"
@@ -36,7 +36,7 @@ public let kDLParameterTerm = "utm_term"
         return parameters
     }
     
-    @objc public func dictionaryFromQuery(_ queryString: String?) -> [String: String] {
+    public func dictionaryFromQuery(_ queryString: String?) -> [String: String] {
         guard let queryString = queryString else {
             return [:]
         }
@@ -61,7 +61,7 @@ public let kDLParameterTerm = "utm_term"
     /// Không hợp lệ: "https://randomsite.com/game?id=2" (Không thuộc danh sách DLCustomDomains) || "https://deeplink.algamestudio.com/invalid" (Không có đường dẫn hợp lệ hoặc query "link")
     /// - Parameter url: Deeplink (Vd: https://deeplink.algamestudio.com)
     /// - Returns: True nếu hợp lệ hoặc false nếu không hợp lệ
-    @objc public func isURLForAllowedCustomDomain(_ url: URL?) -> Bool {
+    public func isURLForAllowedCustomDomain(_ url: URL?) -> Bool {
         guard let url = url else {
             return false
         }
@@ -92,7 +92,7 @@ public let kDLParameterTerm = "utm_term"
     /* We are validating following domains in proper format.
      * .algamestudio.com
      */
-    @objc public func isValidDLWithDomain(_ url: URL?) -> Bool {
+    public func isValidDLWithDomain(_ url: URL?) -> Bool {
         guard let url = url, let host = url.host else {
             return false
         }
@@ -113,7 +113,7 @@ public let kDLParameterTerm = "utm_term"
      format
      3. OR the domain is a listed custom domain
      */
-    @objc public func canParseUniversalLinkURL(_ url: URL?) -> Bool {
+    public func canParseUniversalLinkURL(_ url: URL?) -> Bool {
         guard let url = url, let host = url.host else {
             return false
         }
@@ -138,7 +138,7 @@ public let kDLParameterTerm = "utm_term"
         return false
     }
     
-    @objc public func matchesShortLinkFormat(_ url: URL) -> Bool {
+    public func matchesShortLinkFormat(_ url: URL) -> Bool {
         // Short Durable Link URLs phải có path hoặc thuộc một custom domain hợp lệ.
         let hasPathOrCustomDomain = !url.path.isEmpty || self.isURLForAllowedCustomDomain(url)
         // Kiểm tra nếu URL có thể được parse như một Universal Link hợp lệ.
@@ -152,7 +152,7 @@ public let kDLParameterTerm = "utm_term"
         return result
     }
     
-    @objc public func addToAllowListForCustomDomainsArray(_ customDomains: [String]) {
+    public func addToAllowListForCustomDomainsArray(_ customDomains: [String]) {
         // Duplicates will be weeded out when converting to a set.
         var validCustomDomains = [URL]()
         
@@ -171,7 +171,7 @@ public let kDLParameterTerm = "utm_term"
     }
     
     /// Hàm kiểm tra first open hay reopen (điều kiện reopen là khi app được mở lại sau khi đã được đóng hoàn). Lưu key là urlString và số lần mở deeplink vào UserDefaults.
-    @objc public func checkForDeepLinkAfterLaunch(_ url: URL) {
+    public func checkForDeepLinkAfterLaunch(_ url: URL) {
         // Lấy danh sách deeplink đã mở từ UserDefaults
         var listDeepLinks = (DLUserDefaultHelper.shared.getDictionary(forKey: kDLReadDeepLinkAfterLaunchApp) as? [String: Int]) ?? [:]
         

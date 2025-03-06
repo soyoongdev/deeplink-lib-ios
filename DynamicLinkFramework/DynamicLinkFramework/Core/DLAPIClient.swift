@@ -7,9 +7,9 @@
 
 import Foundation
 
-@objc public class DLAPIClient: NSObject {
+@objcMembers public class DLAPIClient: NSObject {
   
-  @objc public static let shared = DLAPIClient()
+  public static let shared = DLAPIClient()
   
   private override init() {} // Singleton
   
@@ -19,7 +19,7 @@ import Foundation
     return URLSession(configuration: config)
   }()
   
-  @objc public func request(
+  public func request(
     endpoint: String,
     method: String = "GET",
     parameters: [String: Any]? = nil,
@@ -83,19 +83,19 @@ import Foundation
   
   // MARK: - Helper Methods (Giống Axios)
   
-  @objc public func get(endpoint: String, parameters: [String: Any]? = nil, headers: [String: String]? = nil, completion: @escaping DLDynamicLinkResultHandler) {
+  public func get(endpoint: String, parameters: [String: Any]? = nil, headers: [String: String]? = nil, completion: @escaping DLDynamicLinkResultHandler) {
     request(endpoint: endpoint, method: "GET", parameters: parameters, headers: headers, completion: completion)
   }
   
-  @objc public func post(endpoint: String, parameters: [String: Any], headers: [String: String]? = nil, completion: @escaping DLDynamicLinkResultHandler) {
+  public func post(endpoint: String, parameters: [String: Any], headers: [String: String]? = nil, completion: @escaping DLDynamicLinkResultHandler) {
     request(endpoint: endpoint, method: "POST", parameters: parameters, headers: headers, completion: completion)
   }
   
-  @objc public func put(endpoint: String, parameters: [String: Any], headers: [String: String]? = nil, completion: @escaping DLDynamicLinkResultHandler) {
+  public func put(endpoint: String, parameters: [String: Any], headers: [String: String]? = nil, completion: @escaping DLDynamicLinkResultHandler) {
     request(endpoint: endpoint, method: "PUT", parameters: parameters, headers: headers, completion: completion)
   }
   
-  @objc public func delete(endpoint: String, parameters: [String: Any]? = nil, headers: [String: String]? = nil, completion: @escaping DLDynamicLinkResultHandler) {
+  public func delete(endpoint: String, parameters: [String: Any]? = nil, headers: [String: String]? = nil, completion: @escaping DLDynamicLinkResultHandler) {
     request(endpoint: endpoint, method: "DELETE", parameters: parameters, headers: headers, completion: completion)
   }
 }

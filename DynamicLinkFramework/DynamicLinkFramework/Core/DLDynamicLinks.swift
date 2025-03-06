@@ -8,20 +8,20 @@
 import Foundation
 import UIKit
 
-@objc public class DLDynamicLinks: NSObject {
+@objcMembers public class DLDynamicLinks: NSObject {
     
-    @objc public static let shared = DLDynamicLinks()
+    public static let shared = DLDynamicLinks()
     
     private var urlScheme: String = ""
     
     // MARK: - Custom domains
     
-    override init() {
+    override public init() {
         super.init()
         self.checkForCustomDomainEntriesInInfoPlist()
     }
     
-    @objc public func configureDynamicLinks() {
+    public func configureDynamicLinks() {
         if let urlSchemesFromInfoPlist = Bundle.main.infoDictionary?["CFBundleURLTypes"] as? [[String: Any]] {
             for schemeDetails in urlSchemesFromInfoPlist {
                 if let arrayOfSchemes = schemeDetails["CFBundleURLSchemes"] as? [String] {
@@ -32,7 +32,7 @@ import UIKit
         self.urlScheme = Bundle.main.bundleIdentifier ?? ""
     }
     
-    @objc public func createShortURL(from parameters: [String: Any], completion: @escaping (Data?, Error?) -> Void) {
+    public func createShortURL(from parameters: [String: Any], completion: @escaping (Data?, Error?) -> Void) {
         // Sử dụng hàm generateShortURLFakeResponse nếu chưa có api
         DLDynamicLinkNetworking.shared.createShortURLFakeResponse(from: parameters, completion: completion)
         // Sử dụng hàm generateShortURLFakeResponse nếu chưa có api
@@ -40,7 +40,7 @@ import UIKit
     }
     
     // MARK: - Xử lý Custom URL Scheme
-    @objc public func dynamicLinkFromCustomSchemeURL(_ url: URL?) -> DLDynamicLink? {
+    public func dynamicLinkFromCustomSchemeURL(_ url: URL?) -> DLDynamicLink? {
         guard let url = url else {
             DLLogger.log("❌ URL is nil.", level: .error)
             return nil
@@ -62,7 +62,7 @@ import UIKit
     }
     
     // MARK: - Xử lý Universal Link
-    @objc public func handleUniversalLink(_ url: URL?, completion: @escaping DLDynamicLinkUniversalLinkHandler) -> Bool {
+    public func handleUniversalLink(_ url: URL?, completion: @escaping DLDynamicLinkUniversalLinkHandler) -> Bool {
         guard let url = url else {
             DLLogger.log("❌ URL is nil.", level: .error)
             return false

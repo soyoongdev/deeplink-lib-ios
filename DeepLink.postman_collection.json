@@ -1,0 +1,228 @@
+{
+	"info": {
+		"_postman_id": "b85b1582-63cf-484c-8309-610b34d00cb6",
+		"name": "DeepLink CMS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "16308941"
+	},
+	"item": [
+		{
+			"name": "Create Deeplink in CMS",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"shortLink\": \"a4aj3\",\r\n    \"deepLink\": \"https://fuckthisgame.so.bad/internet_wifi\",\r\n    \"name\":\"internet_wifi111\",\r\n    \"isOpenAndroid\": 1,\r\n    \"isOpenIos\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{test}}}/deeplink/create"
+			},
+			"response": []
+		},
+		{
+			"name": "Tracking Click",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{test}}/event/tracking-click?shortLink=chatv2&deviceId=d4lg6s",
+					"host": [
+						"{{test}}"
+					],
+					"path": [
+						"event",
+						"tracking-click"
+					],
+					"query": [
+						{
+							"key": "shortLink",
+							"value": "chatv2"
+						},
+						{
+							"key": "deviceId",
+							"value": "d4lg6s"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tracking First-Open",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{test}}/event/tracking-firstopen?shortLink=chatv2&deviceId=d4lg6s",
+					"host": [
+						"{{test}}"
+					],
+					"path": [
+						"event",
+						"tracking-firstopen"
+					],
+					"query": [
+						{
+							"key": "shortLink",
+							"value": "chatv2"
+						},
+						{
+							"key": "deviceId",
+							"value": "d4lg6s"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tracking Re-Open",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{test}}/event/tracking-reopen?shortLink=chatv2&deviceId=d4lg6s",
+					"host": [
+						"{{test}}"
+					],
+					"path": [
+						"event",
+						"tracking-reopen"
+					],
+					"query": [
+						{
+							"key": "shortLink",
+							"value": "chatv2"
+						},
+						{
+							"key": "deviceId",
+							"value": "d4lg6s"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tracking App Install",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{test}}/event/tracking-appinstall?shortLink=chatv2&deviceId=d4lg6s",
+					"host": [
+						"{{test}}"
+					],
+					"path": [
+						"event",
+						"tracking-appinstall"
+					],
+					"query": [
+						{
+							"key": "shortLink",
+							"value": "chatv2"
+						},
+						{
+							"key": "deviceId",
+							"value": "d4lg6s"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tracking Redirects",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{test}}/event/tracking-redirects?shortLink=chatv2&deviceId=d4lg6s",
+					"host": [
+						"{{test}}"
+					],
+					"path": [
+						"event",
+						"tracking-redirects"
+					],
+					"query": [
+						{
+							"key": "shortLink",
+							"value": "chatv2"
+						},
+						{
+							"key": "deviceId",
+							"value": "d4lg6s"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

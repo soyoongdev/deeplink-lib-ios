@@ -18,22 +18,22 @@ public let kDLParameterMatchType = "matchType"
 public let kDLParameterMatchMessage = "matchMessage"
 
 /// Class đại diện cho một Dynamic Link được xử lý từ Universal Link hoặc Custom Scheme URL
-@objc public class DLDynamicLink: NSObject {
+@objcMembers public class DLDynamicLink: NSObject {
     
     /// URL gốc của Dynamic Link
-    @objc public let originalURL: URL
+    public let originalURL: URL
     
     /// Host của URL (nếu có)
-    @objc public let host: String?
+    public let host: String?
     
     /// Path của URL
-    @objc public let path: String
+    public let path: String
     
     /// Các tham số truy vấn của Dynamic Link (dùng NSDictionary để tương thích)
-    @objc public let parameters: NSDictionary
+    public let parameters: NSDictionary
 
     /// Hàm khởi tạo dùng Objective-C (không dùng `init?`)
-    @objc public init(url: URL) {
+    public init(url: URL) {
         self.originalURL = url
         self.host = url.host
         self.path = url.path
@@ -60,7 +60,7 @@ public let kDLParameterMatchMessage = "matchMessage"
     }
 
     /// Hàm khởi tạo từ các thành phần riêng biệt
-    @objc public init(url: URL, path: String, host: String?, parameters: NSDictionary) {
+    public init(url: URL, path: String, host: String?, parameters: NSDictionary) {
         self.originalURL = url
         self.path = path
         self.host = host
@@ -73,7 +73,7 @@ public let kDLParameterMatchMessage = "matchMessage"
     }
 
     /// Trả về mô tả của đối tượng
-    @objc override public var description: String {
+    override public var description: String {
         return "DLDynamicLink(URL: \(originalURL.absoluteString), Path: \(path), Parameters: \(parameters))"
     }
 }

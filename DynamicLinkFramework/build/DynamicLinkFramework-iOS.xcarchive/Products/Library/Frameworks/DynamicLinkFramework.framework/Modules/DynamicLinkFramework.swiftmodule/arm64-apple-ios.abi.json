@@ -610,8 +610,8 @@
             "moduleName": "DynamicLinkFramework",
             "declAttributes": [
               "AccessControl",
-              "ObjC",
-              "RawDocComment"
+              "RawDocComment",
+              "ObjC"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -647,8 +647,8 @@
             "moduleName": "DynamicLinkFramework",
             "declAttributes": [
               "AccessControl",
-              "ObjC",
-              "RawDocComment"
+              "RawDocComment",
+              "ObjC"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -684,8 +684,8 @@
             "moduleName": "DynamicLinkFramework",
             "declAttributes": [
               "AccessControl",
-              "ObjC",
-              "RawDocComment"
+              "RawDocComment",
+              "ObjC"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -775,8 +775,8 @@
             "moduleName": "DynamicLinkFramework",
             "declAttributes": [
               "AccessControl",
-              "ObjC",
-              "RawDocComment"
+              "RawDocComment",
+              "ObjC"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -813,6 +813,7 @@
         "moduleName": "DynamicLinkFramework",
         "declAttributes": [
           "AccessControl",
+          "ObjCMembers",
           "ObjC"
         ],
         "superclassUsr": "c:objc(cs)NSObject",
@@ -1059,7 +1060,6 @@
             "usr": "c:@M@DynamicLinkFramework@objc(cs)DLDynamicLinks(im)createShortURLFrom:completion:",
             "mangledName": "$s20DynamicLinkFramework14DLDynamicLinksC14createShortURL4from10completionySDySSypG_y10Foundation4DataVSg_s5Error_pSgtctF",
             "moduleName": "DynamicLinkFramework",
-            "objc_name": "createShortURLFrom:completion:",
             "declAttributes": [
               "AccessControl",
               "ObjC"
@@ -1106,8 +1106,8 @@
             "moduleName": "DynamicLinkFramework",
             "declAttributes": [
               "AccessControl",
-              "ObjC",
-              "RawDocComment"
+              "RawDocComment",
+              "ObjC"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -1190,8 +1190,8 @@
             "moduleName": "DynamicLinkFramework",
             "declAttributes": [
               "AccessControl",
-              "ObjC",
-              "RawDocComment"
+              "RawDocComment",
+              "ObjC"
             ],
             "funcSelfKind": "NonMutating"
           }
@@ -1202,6 +1202,7 @@
         "moduleName": "DynamicLinkFramework",
         "declAttributes": [
           "AccessControl",
+          "ObjCMembers",
           "ObjC"
         ],
         "superclassUsr": "c:objc(cs)NSObject",
@@ -1949,8 +1950,9 @@
         "moduleName": "DynamicLinkFramework",
         "declAttributes": [
           "AccessControl",
-          "ObjC",
-          "RawDocComment"
+          "ObjCMembers",
+          "RawDocComment",
+          "ObjC"
         ],
         "superclassUsr": "c:objc(cs)NSObject",
         "superclassNames": [
@@ -2496,8 +2498,8 @@
               "Final",
               "HasStorage",
               "AccessControl",
-              "ObjC",
-              "RawDocComment"
+              "RawDocComment",
+              "ObjC"
             ],
             "hasStorage": true,
             "accessors": [
@@ -2600,8 +2602,8 @@
               "Final",
               "HasStorage",
               "AccessControl",
-              "ObjC",
-              "RawDocComment"
+              "RawDocComment",
+              "ObjC"
             ],
             "hasStorage": true,
             "accessors": [
@@ -2704,8 +2706,8 @@
               "Final",
               "HasStorage",
               "AccessControl",
-              "ObjC",
-              "RawDocComment"
+              "RawDocComment",
+              "ObjC"
             ],
             "hasStorage": true,
             "accessors": [
@@ -2819,8 +2821,9 @@
         "moduleName": "DynamicLinkFramework",
         "declAttributes": [
           "AccessControl",
-          "ObjC",
-          "RawDocComment"
+          "ObjCMembers",
+          "RawDocComment",
+          "ObjC"
         ],
         "superclassUsr": "c:objc(cs)NSObject",
         "inheritsConvenienceInitializers": true,
@@ -2887,7 +2890,7 @@
           {
             "kind": "Function",
             "name": "log",
-            "printedName": "log(_:level:function:file:line:)",
+            "printedName": "log(_:level:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -2906,39 +2909,18 @@
                 "printedName": "DynamicLinkFramework.LogLevel",
                 "hasDefaultArg": true,
                 "usr": "c:@M@DynamicLinkFramework@E@LogLevel"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "hasDefaultArg": true,
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "hasDefaultArg": true,
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "hasDefaultArg": true,
-                "usr": "s:Si"
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@DynamicLinkFramework@objc(cs)DLLogger(cm)log:level:function:file:line:",
-            "mangledName": "$s20DynamicLinkFramework8DLLoggerC3log_5level8function4file4lineySS_AA8LogLevelOS2SSitFZ",
+            "usr": "c:@M@DynamicLinkFramework@objc(cs)DLLogger(cm)log:level:",
+            "mangledName": "$s20DynamicLinkFramework8DLLoggerC3log_5levelySS_AA8LogLevelOtFZ",
             "moduleName": "DynamicLinkFramework",
             "static": true,
             "declAttributes": [
               "Final",
               "AccessControl",
-              "ObjC",
-              "RawDocComment"
+              "RawDocComment",
+              "ObjC"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -2961,8 +2943,8 @@
             "declAttributes": [
               "Final",
               "AccessControl",
-              "ObjC",
-              "RawDocComment"
+              "RawDocComment",
+              "ObjC"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -2999,8 +2981,9 @@
         "moduleName": "DynamicLinkFramework",
         "declAttributes": [
           "AccessControl",
-          "ObjC",
-          "RawDocComment"
+          "ObjCMembers",
+          "RawDocComment",
+          "ObjC"
         ],
         "superclassUsr": "c:objc(cs)NSObject",
         "inheritsConvenienceInitializers": true,
@@ -3105,7 +3088,7 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:20DynamicLinkFramework8DLConfigC12allowedHostsSaySSGvpZ",
+            "usr": "c:@M@DynamicLinkFramework@objc(cs)DLConfig(cpy)allowedHosts",
             "mangledName": "$s20DynamicLinkFramework8DLConfigC12allowedHostsSaySSGvpZ",
             "moduleName": "DynamicLinkFramework",
             "static": true,
@@ -3114,7 +3097,8 @@
               "Final",
               "HasStorage",
               "AccessControl",
-              "RawDocComment"
+              "RawDocComment",
+              "ObjC"
             ],
             "hasStorage": true,
             "accessors": [
@@ -3139,13 +3123,14 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:20DynamicLinkFramework8DLConfigC12allowedHostsSaySSGvgZ",
+                "usr": "c:@M@DynamicLinkFramework@objc(cs)DLConfig(cm)allowedHosts",
                 "mangledName": "$s20DynamicLinkFramework8DLConfigC12allowedHostsSaySSGvgZ",
                 "moduleName": "DynamicLinkFramework",
                 "static": true,
                 "implicit": true,
                 "declAttributes": [
-                  "Final"
+                  "Final",
+                  "ObjC"
                 ],
                 "accessorKind": "get"
               },
@@ -3175,13 +3160,14 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:20DynamicLinkFramework8DLConfigC12allowedHostsSaySSGvsZ",
+                "usr": "c:@M@DynamicLinkFramework@objc(cs)DLConfig(cm)setAllowedHosts:",
                 "mangledName": "$s20DynamicLinkFramework8DLConfigC12allowedHostsSaySSGvsZ",
                 "moduleName": "DynamicLinkFramework",
                 "static": true,
                 "implicit": true,
                 "declAttributes": [
-                  "Final"
+                  "Final",
+                  "ObjC"
                 ],
                 "accessorKind": "set"
               },
@@ -3230,7 +3216,7 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:20DynamicLinkFramework8DLConfigC10appSchemesSaySSGvpZ",
+            "usr": "c:@M@DynamicLinkFramework@objc(cs)DLConfig(cpy)appSchemes",
             "mangledName": "$s20DynamicLinkFramework8DLConfigC10appSchemesSaySSGvpZ",
             "moduleName": "DynamicLinkFramework",
             "static": true,
@@ -3239,7 +3225,8 @@
               "Final",
               "HasStorage",
               "AccessControl",
-              "RawDocComment"
+              "RawDocComment",
+              "ObjC"
             ],
             "hasStorage": true,
             "accessors": [
@@ -3264,13 +3251,14 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:20DynamicLinkFramework8DLConfigC10appSchemesSaySSGvgZ",
+                "usr": "c:@M@DynamicLinkFramework@objc(cs)DLConfig(cm)appSchemes",
                 "mangledName": "$s20DynamicLinkFramework8DLConfigC10appSchemesSaySSGvgZ",
                 "moduleName": "DynamicLinkFramework",
                 "static": true,
                 "implicit": true,
                 "declAttributes": [
-                  "Final"
+                  "Final",
+                  "ObjC"
                 ],
                 "accessorKind": "get"
               },
@@ -3300,13 +3288,14 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:20DynamicLinkFramework8DLConfigC10appSchemesSaySSGvsZ",
+                "usr": "c:@M@DynamicLinkFramework@objc(cs)DLConfig(cm)setAppSchemes:",
                 "mangledName": "$s20DynamicLinkFramework8DLConfigC10appSchemesSaySSGvsZ",
                 "moduleName": "DynamicLinkFramework",
                 "static": true,
                 "implicit": true,
                 "declAttributes": [
-                  "Final"
+                  "Final",
+                  "ObjC"
                 ],
                 "accessorKind": "set"
               },
@@ -3367,6 +3356,7 @@
         "moduleName": "DynamicLinkFramework",
         "declAttributes": [
           "AccessControl",
+          "ObjCMembers",
           "ObjC"
         ],
         "superclassUsr": "c:objc(cs)NSObject",
@@ -3881,8 +3871,9 @@
         "moduleName": "DynamicLinkFramework",
         "declAttributes": [
           "AccessControl",
-          "ObjC",
-          "RawDocComment"
+          "ObjCMembers",
+          "RawDocComment",
+          "ObjC"
         ],
         "superclassUsr": "c:objc(cs)NSObject",
         "inheritsConvenienceInitializers": true,
@@ -4038,8 +4029,8 @@
             "moduleName": "DynamicLinkFramework",
             "declAttributes": [
               "AccessControl",
-              "ObjC",
-              "RawDocComment"
+              "RawDocComment",
+              "ObjC"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -4073,11 +4064,10 @@
             "usr": "c:@M@DynamicLinkFramework@objc(cs)DLUserDefaultHelper(im)getStringForKey:",
             "mangledName": "$s20DynamicLinkFramework19DLUserDefaultHelperC9getString6forKeySSSgSS_tF",
             "moduleName": "DynamicLinkFramework",
-            "objc_name": "getStringForKey:",
             "declAttributes": [
               "AccessControl",
-              "ObjC",
-              "RawDocComment"
+              "RawDocComment",
+              "ObjC"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -4110,8 +4100,8 @@
             "moduleName": "DynamicLinkFramework",
             "declAttributes": [
               "AccessControl",
-              "ObjC",
-              "RawDocComment"
+              "RawDocComment",
+              "ObjC"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -4137,11 +4127,10 @@
             "usr": "c:@M@DynamicLinkFramework@objc(cs)DLUserDefaultHelper(im)getIntForKey:",
             "mangledName": "$s20DynamicLinkFramework19DLUserDefaultHelperC6getInt6forKeySiSS_tF",
             "moduleName": "DynamicLinkFramework",
-            "objc_name": "getIntForKey:",
             "declAttributes": [
               "AccessControl",
-              "ObjC",
-              "RawDocComment"
+              "RawDocComment",
+              "ObjC"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -4174,8 +4163,8 @@
             "moduleName": "DynamicLinkFramework",
             "declAttributes": [
               "AccessControl",
-              "ObjC",
-              "RawDocComment"
+              "RawDocComment",
+              "ObjC"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -4201,11 +4190,10 @@
             "usr": "c:@M@DynamicLinkFramework@objc(cs)DLUserDefaultHelper(im)getBoolForKey:",
             "mangledName": "$s20DynamicLinkFramework19DLUserDefaultHelperC7getBool6forKeySbSS_tF",
             "moduleName": "DynamicLinkFramework",
-            "objc_name": "getBoolForKey:",
             "declAttributes": [
               "AccessControl",
-              "ObjC",
-              "RawDocComment"
+              "RawDocComment",
+              "ObjC"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -4238,8 +4226,8 @@
             "moduleName": "DynamicLinkFramework",
             "declAttributes": [
               "AccessControl",
-              "ObjC",
-              "RawDocComment"
+              "RawDocComment",
+              "ObjC"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -4273,11 +4261,10 @@
             "usr": "c:@M@DynamicLinkFramework@objc(cs)DLUserDefaultHelper(im)getDictionaryForKey:",
             "mangledName": "$s20DynamicLinkFramework19DLUserDefaultHelperC13getDictionary6forKeySo12NSDictionaryCSgSS_tF",
             "moduleName": "DynamicLinkFramework",
-            "objc_name": "getDictionaryForKey:",
             "declAttributes": [
               "AccessControl",
-              "ObjC",
-              "RawDocComment"
+              "RawDocComment",
+              "ObjC"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -4302,11 +4289,10 @@
             "usr": "c:@M@DynamicLinkFramework@objc(cs)DLUserDefaultHelper(im)removeForKey:",
             "mangledName": "$s20DynamicLinkFramework19DLUserDefaultHelperC6remove6forKeyySS_tF",
             "moduleName": "DynamicLinkFramework",
-            "objc_name": "removeForKey:",
             "declAttributes": [
               "AccessControl",
-              "ObjC",
-              "RawDocComment"
+              "RawDocComment",
+              "ObjC"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -4334,8 +4320,8 @@
             "moduleName": "DynamicLinkFramework",
             "declAttributes": [
               "AccessControl",
-              "ObjC",
-              "RawDocComment"
+              "RawDocComment",
+              "ObjC"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -4356,8 +4342,8 @@
             "moduleName": "DynamicLinkFramework",
             "declAttributes": [
               "AccessControl",
-              "ObjC",
-              "RawDocComment"
+              "RawDocComment",
+              "ObjC"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -4394,8 +4380,9 @@
         "moduleName": "DynamicLinkFramework",
         "declAttributes": [
           "AccessControl",
-          "ObjC",
-          "RawDocComment"
+          "ObjCMembers",
+          "RawDocComment",
+          "ObjC"
         ],
         "superclassUsr": "c:objc(cs)NSObject",
         "inheritsConvenienceInitializers": true,
@@ -4846,7 +4833,6 @@
             "usr": "c:@M@DynamicLinkFramework@objc(cs)DLAPIClient(im)requestWithEndpoint:method:parameters:headers:completion:",
             "mangledName": "$s20DynamicLinkFramework11DLAPIClientC7request8endpoint6method10parameters7headers10completionySS_SSSDySSypGSgSDyS2SGSgy10Foundation4DataVSg_s5Error_pSgtctF",
             "moduleName": "DynamicLinkFramework",
-            "objc_name": "requestWithEndpoint:method:parameters:headers:completion:",
             "declAttributes": [
               "AccessControl",
               "ObjC"
@@ -4978,11 +4964,10 @@
             "usr": "c:@M@DynamicLinkFramework@objc(cs)DLAPIClient(im)getWithEndpoint:parameters:headers:completion:",
             "mangledName": "$s20DynamicLinkFramework11DLAPIClientC3get8endpoint10parameters7headers10completionySS_SDySSypGSgSDyS2SGSgy10Foundation4DataVSg_s5Error_pSgtctF",
             "moduleName": "DynamicLinkFramework",
-            "objc_name": "getWithEndpoint:parameters:headers:completion:",
             "declAttributes": [
               "AccessControl",
-              "ObjC",
-              "RawDocComment"
+              "RawDocComment",
+              "ObjC"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -5102,7 +5087,6 @@
             "usr": "c:@M@DynamicLinkFramework@objc(cs)DLAPIClient(im)postWithEndpoint:parameters:headers:completion:",
             "mangledName": "$s20DynamicLinkFramework11DLAPIClientC4post8endpoint10parameters7headers10completionySS_SDySSypGSDyS2SGSgy10Foundation4DataVSg_s5Error_pSgtctF",
             "moduleName": "DynamicLinkFramework",
-            "objc_name": "postWithEndpoint:parameters:headers:completion:",
             "declAttributes": [
               "AccessControl",
               "ObjC"
@@ -5225,7 +5209,6 @@
             "usr": "c:@M@DynamicLinkFramework@objc(cs)DLAPIClient(im)putWithEndpoint:parameters:headers:completion:",
             "mangledName": "$s20DynamicLinkFramework11DLAPIClientC3put8endpoint10parameters7headers10completionySS_SDySSypGSDyS2SGSgy10Foundation4DataVSg_s5Error_pSgtctF",
             "moduleName": "DynamicLinkFramework",
-            "objc_name": "putWithEndpoint:parameters:headers:completion:",
             "declAttributes": [
               "AccessControl",
               "ObjC"
@@ -5357,7 +5340,6 @@
             "usr": "c:@M@DynamicLinkFramework@objc(cs)DLAPIClient(im)deleteWithEndpoint:parameters:headers:completion:",
             "mangledName": "$s20DynamicLinkFramework11DLAPIClientC6delete8endpoint10parameters7headers10completionySS_SDySSypGSgSDyS2SGSgy10Foundation4DataVSg_s5Error_pSgtctF",
             "moduleName": "DynamicLinkFramework",
-            "objc_name": "deleteWithEndpoint:parameters:headers:completion:",
             "declAttributes": [
               "AccessControl",
               "ObjC"
@@ -5371,6 +5353,7 @@
         "moduleName": "DynamicLinkFramework",
         "declAttributes": [
           "AccessControl",
+          "ObjCMembers",
           "ObjC"
         ],
         "superclassUsr": "c:objc(cs)NSObject",
@@ -6127,7 +6110,7 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:20DynamicLinkFramework09DLDynamicB10NetworkingC6sharedACvpZ",
+            "usr": "c:@M@DynamicLinkFramework@objc(cs)DLDynamicLinkNetworking(cpy)shared",
             "mangledName": "$s20DynamicLinkFramework09DLDynamicB10NetworkingC6sharedACvpZ",
             "moduleName": "DynamicLinkFramework",
             "static": true,
@@ -6135,7 +6118,8 @@
               "HasInitialValue",
               "Final",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "isLet": true,
             "hasStorage": true,
@@ -6153,13 +6137,14 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:20DynamicLinkFramework09DLDynamicB10NetworkingC6sharedACvgZ",
+                "usr": "c:@M@DynamicLinkFramework@objc(cs)DLDynamicLinkNetworking(cm)shared",
                 "mangledName": "$s20DynamicLinkFramework09DLDynamicB10NetworkingC6sharedACvgZ",
                 "moduleName": "DynamicLinkFramework",
                 "static": true,
                 "implicit": true,
                 "declAttributes": [
-                  "Final"
+                  "Final",
+                  "ObjC"
                 ],
                 "accessorKind": "get"
               }
@@ -6237,7 +6222,6 @@
             "usr": "c:@M@DynamicLinkFramework@objc(cs)DLDynamicLinkNetworking(im)extractErrorForShortLinkWithUrl:data:response:error:",
             "mangledName": "$s20DynamicLinkFramework09DLDynamicB10NetworkingC020extractErrorForShortB03url4data8response5errors0G0_pSg10Foundation3URLV_AK4DataVSgSo13NSURLResponseCSgAJtF",
             "moduleName": "DynamicLinkFramework",
-            "objc_name": "extractErrorForShortLinkWithUrl:data:response:error:",
             "declAttributes": [
               "AccessControl",
               "ObjC"
@@ -6320,11 +6304,10 @@
             "usr": "c:@M@DynamicLinkFramework@objc(cs)DLDynamicLinkNetworking(im)resolveShortLinkWithUrl:completion:",
             "mangledName": "$s20DynamicLinkFramework09DLDynamicB10NetworkingC012resolveShortB03url10completiony10Foundation3URLVSg_yAJ_s5Error_pSgtctF",
             "moduleName": "DynamicLinkFramework",
-            "objc_name": "resolveShortLinkWithUrl:completion:",
             "declAttributes": [
               "AccessControl",
-              "ObjC",
-              "RawDocComment"
+              "RawDocComment",
+              "ObjC"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -6409,7 +6392,6 @@
             "usr": "c:@M@DynamicLinkFramework@objc(cs)DLDynamicLinkNetworking(im)createShortURLFakeResponseFrom:completion:",
             "mangledName": "$s20DynamicLinkFramework09DLDynamicB10NetworkingC26createShortURLFakeResponse4from10completionySDySSypG_y10Foundation4DataVSg_s5Error_pSgtctF",
             "moduleName": "DynamicLinkFramework",
-            "objc_name": "createShortURLFakeResponseFrom:completion:",
             "declAttributes": [
               "AccessControl",
               "ObjC"
@@ -6497,7 +6479,6 @@
             "usr": "c:@M@DynamicLinkFramework@objc(cs)DLDynamicLinkNetworking(im)createShortURLFrom:completion:",
             "mangledName": "$s20DynamicLinkFramework09DLDynamicB10NetworkingC14createShortURL4from10completionySDySSypG_y10Foundation4DataVSg_s5Error_pSgtctF",
             "moduleName": "DynamicLinkFramework",
-            "objc_name": "createShortURLFrom:completion:",
             "declAttributes": [
               "AccessControl",
               "ObjC"
@@ -6590,11 +6571,10 @@
             "usr": "c:@M@DynamicLinkFramework@objc(cs)DLDynamicLinkNetworking(im)updateDeepLinkAnalyticsWithUrl:count:firstOpen:reopen:completion:",
             "mangledName": "$s20DynamicLinkFramework09DLDynamicB10NetworkingC010updateDeepB9Analytics3url5count9firstOpen6reopen10completiony10Foundation3URLV_SiS2byAJ4DataVSg_s5Error_pSgtctF",
             "moduleName": "DynamicLinkFramework",
-            "objc_name": "updateDeepLinkAnalyticsWithUrl:count:firstOpen:reopen:completion:",
             "declAttributes": [
               "AccessControl",
-              "ObjC",
-              "RawDocComment"
+              "RawDocComment",
+              "ObjC"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -6631,6 +6611,7 @@
         "moduleName": "DynamicLinkFramework",
         "declAttributes": [
           "AccessControl",
+          "ObjCMembers",
           "ObjC"
         ],
         "superclassUsr": "c:objc(cs)NSObject",
@@ -10191,14 +10172,14 @@
     {
       "filePath": "\/Users\/nguyenhau\/Desktop\/projects\/deeplink-lib-ios\/DynamicLinkFramework\/DynamicLinkFramework\/Utilities\/DLUtilities.swift",
       "kind": "Array",
-      "offset": 573,
+      "offset": 568,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/nguyenhau\/Desktop\/projects\/deeplink-lib-ios\/DynamicLinkFramework\/DynamicLinkFramework\/Core\/DLDynamicLinks.swift",
       "kind": "StringLiteral",
-      "offset": 261,
+      "offset": 268,
       "length": 2,
       "value": "\"\""
     },
@@ -10247,7 +10228,7 @@
     {
       "filePath": "\/Users\/nguyenhau\/Desktop\/projects\/deeplink-lib-ios\/DynamicLinkFramework\/DynamicLinkFramework\/Core\/DLDynamicLink.swift",
       "kind": "StringLiteral",
-      "offset": 657,
+      "offset": 664,
       "length": 13,
       "value": "\"DynamicLinkFramework.DLDynamicLink\""
     },
@@ -10310,42 +10291,42 @@
     {
       "filePath": "\/Users\/nguyenhau\/Desktop\/projects\/deeplink-lib-ios\/DynamicLinkFramework\/DynamicLinkFramework\/Core\/DLLogger.swift",
       "kind": "BooleanLiteral",
-      "offset": 603,
+      "offset": 604,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/nguyenhau\/Desktop\/projects\/deeplink-lib-ios\/DynamicLinkFramework\/DynamicLinkFramework\/Core\/DLLogger.swift",
       "kind": "BooleanLiteral",
-      "offset": 688,
+      "offset": 683,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/nguyenhau\/Desktop\/projects\/deeplink-lib-ios\/DynamicLinkFramework\/DynamicLinkFramework\/Core\/DLLogger.swift",
       "kind": "BooleanLiteral",
-      "offset": 770,
+      "offset": 759,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/nguyenhau\/Desktop\/projects\/deeplink-lib-ios\/DynamicLinkFramework\/DynamicLinkFramework\/Core\/DLLogger.swift",
       "kind": "BooleanLiteral",
-      "offset": 850,
+      "offset": 833,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/nguyenhau\/Desktop\/projects\/deeplink-lib-ios\/DynamicLinkFramework\/DynamicLinkFramework\/Core\/DLConfig.swift",
       "kind": "Array",
-      "offset": 241,
+      "offset": 248,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/nguyenhau\/Desktop\/projects\/deeplink-lib-ios\/DynamicLinkFramework\/DynamicLinkFramework\/Core\/DLConfig.swift",
       "kind": "Array",
-      "offset": 410,
+      "offset": 417,
       "length": 2,
       "value": "[]"
     },
@@ -10380,14 +10361,14 @@
     {
       "filePath": "\/Users\/nguyenhau\/Desktop\/projects\/deeplink-lib-ios\/DynamicLinkFramework\/DynamicLinkFramework\/Core\/DLAPIClient.swift",
       "kind": "IntegerLiteral",
-      "offset": 368,
+      "offset": 369,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/nguyenhau\/Desktop\/projects\/deeplink-lib-ios\/DynamicLinkFramework\/DynamicLinkFramework\/Core\/DLAPIClient.swift",
       "kind": "StringLiteral",
-      "offset": 512,
+      "offset": 507,
       "length": 5,
       "value": "\"GET\""
     },
