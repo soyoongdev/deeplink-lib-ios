@@ -48,7 +48,7 @@ import UIKit
         self.checkForDeepLinkAfterLaunch(url)
         // Lấy query từ URL
         let query = url.query ?? ""
-        let queryDictionary = DLUtilities.shared.dictionaryFromQuery(query)
+        let queryDictionary = DLUtilities.shared.dictionaryFromQuery(query) as NSDictionary
         if query.isEmpty {
             DLLogger.log("⚠️ No query parameters found in URL.", level: .warning)
         } else {

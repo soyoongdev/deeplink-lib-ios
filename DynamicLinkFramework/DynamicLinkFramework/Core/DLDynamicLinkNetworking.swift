@@ -17,7 +17,7 @@ public let kAnalyticsDataContentKey = "utmContent"
 public let kHeaderIosBundleIdentifier = "X-Ios-Bundle-Identifier"
 public let kGenericErrorDomain = "deeplink.algamestudio.com"
 
-public enum DLShortURLType: Int {
+@objc public enum DLShortURLType: Int {
     case unlimitedUse = 0
     case oneTimeUse = 1
 };
@@ -26,7 +26,7 @@ public enum DLShortURLType: Int {
     
     public static let shared = DLDynamicLinkNetworking()
     
-    @objc public  func extractErrorForShortLink(url: URL, data: Data?, response: URLResponse?, error: Error?) -> Error? {
+    @objc public func extractErrorForShortLink(url: URL, data: Data?, response: URLResponse?, error: Error?) -> Error? {
         if let error = error {
             return error
         }

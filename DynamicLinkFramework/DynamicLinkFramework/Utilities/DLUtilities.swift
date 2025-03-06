@@ -8,12 +8,12 @@
 
 import Foundation
 
-let kDLParameterLink = "link"
-let kDLParameterCampaign = "utm_campaign"
-let kDLParameterContent = "utm_content"
-let kDLParameterMedium = "utm_medium"
-let kDLParameterSource = "utm_source"
-let kDLParameterTerm = "utm_term"
+public let kDLParameterLink = "link"
+public let kDLParameterCampaign = "utm_campaign"
+public let kDLParameterContent = "utm_content"
+public let kDLParameterMedium = "utm_medium"
+public let kDLParameterSource = "utm_source"
+public let kDLParameterTerm = "utm_term"
 
 @objc public class DLUtilities: NSObject {
     
